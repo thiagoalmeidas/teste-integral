@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 type Title = {
     title:string
@@ -8,7 +8,8 @@ type Title = {
 function Category(props: Title) {
 
     return (
-      <div className="my-4">
+      
+      <div className="card my-4 p-4 border-0 rounded-3 bg-warning">
         <h3 className="fw-bold">{props.title}</h3>
         <p>{props.subtitle}</p>
       </div>

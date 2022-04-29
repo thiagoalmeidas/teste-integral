@@ -15,9 +15,9 @@ function Container() {
     <div className='container'>
 
       <nav>
-        <button onClick={() => filterResult('todas')} className='btn b-0 p-0 m-0'  id='limpeza'>Todas</button>
-        <button onClick={() => filterResult('frutas')} className='btn'  id='frutas'>Frutas</button>
-        <button onClick={() => filterResult('limpeza')} className='btn'  id='limpeza'>Limpeza</button>
+        <button onClick={() => filterResult('todas')} className='btn border-bottom'  id='limpeza'>Todas</button>
+        <button onClick={() => filterResult('frutas')} className='btn border-bottom mx-2'  id='frutas'>Frutas</button>
+        <button onClick={() => filterResult('limpeza')} className='btn border-bottom'  id='limpeza'>Limpeza</button>
       </nav>  
 
       {data.map((values)=>{        

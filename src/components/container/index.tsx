@@ -4,6 +4,7 @@ import Products from './produtos';
 
 function Container() {
   const [data,setData] = useState(Products);
+  
   const filterResult = (catItem: string) => {
     const result = Products.filter((curData)=>{
       return curData.categoria !== catItem;

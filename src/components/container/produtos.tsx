@@ -3,7 +3,7 @@ const Products =
 		{
 			"produtoId": 1,
 			"descricao": "Melancia",
-			"quantidade": "10",
+			"quantidade": "0",
 			"categoria": "frutas"				
 		},
 		{

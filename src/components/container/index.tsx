@@ -4,6 +4,10 @@ import { produtos } from '../../data/produtos.json';
 
 function Container() {
   const [data,setData] = useState(produtos);
+  
+  useEffect(()=>{
+   setData(produtos)
+  },[produtos]);
 
   const filterResult = (catItem: string) => {
     const result = produtos.filter((curData)=>{

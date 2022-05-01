@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../card';
-import Products from '../../data/produtos.json';
+import { produtos } from '../../data/produtos.json';
 
 function Container() {
-  const [data,setData] = useState(Products.produtos);
-  
+  const [data,setData] = useState(produtos);
+
   const filterResult = (catItem: string) => {
-    const result = Products.produtos.filter((curData)=>{
+    const result = produtos.filter((curData)=>{
       return curData.categoria !== catItem;
     });
     setData(result);
@@ -22,13 +22,13 @@ function Container() {
         <button onClick={() => filterResult('frutas')} className='btn border-bottom'>Frutas</button>
       </nav>  
 
-      {data.map((values)=>{        
+      {data.map(({produtoId, quantidade, categoria, descricao})=>{        
         return(
           <Card 
-            key={values.produtoId}            
-            descricao= {values.descricao}
-            quantidade= {values.quantidade}
-            categoria= {values.categoria}
+            key={produtoId}            
+            descricao= {descricao}
+            quantidade= {quantidade}
+            categoria= {categoria}
           />
         )
       })} 

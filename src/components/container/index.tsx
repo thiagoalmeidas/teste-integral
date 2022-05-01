@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Card from '../card';
-import Products from './produtos';
+import Products from '../../data/produtos.json';
 
 function Container() {
-  const [data,setData] = useState(Products);
+  const [data,setData] = useState(Products.produtos);
   
   const filterResult = (catItem: string) => {
-    const result = Products.filter((curData)=>{
+    const result = Products.produtos.filter((curData)=>{
       return curData.categoria !== catItem;
     });
     setData(result);
@@ -31,7 +31,7 @@ function Container() {
             categoria= {values.categoria}
           />
         )
-      })}        
+      })} 
     
     </div>
   )

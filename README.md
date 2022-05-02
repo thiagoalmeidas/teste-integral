@@ -5,5 +5,5 @@
 Stacks
 
 <p>-> React</p>
-<p>-> Typescrip</p>
+<p>-> Typescript</p>
 <p>-> Bootstrap</p>
